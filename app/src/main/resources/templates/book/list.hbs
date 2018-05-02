@@ -1,0 +1,22 @@
+<form action="/book" method="post">
+title: <input type="text" name="title">
+page: <input type="text" name="page">
+author: <input type="text" name="author">
+<input type="submit" value="create">
+</form>
+<table border="1">
+    <tr>
+        <td>bookId</td>
+        <td>title</td>
+        <td>page</td>
+        <td>author</td>
+    </tr>
+    {{#list}}
+        <tr>
+            <td>{{bookId}}</td>
+            <td>{{title}}</td>
+            <td>{{page}}</td>
+            <td>{{author}}</td>
+        </tr>
+    {{/list}}
+</table>

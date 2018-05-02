@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://mysql:3306/test?useSSL=false
+    username: root
+    password: hellokoding
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    show-sql: true
+
+handlebars:
+  enabled: true
+  prefix: classpath:templates/
+  suffix: .hbs
+  cache: false
+  registerMessageHelper: true
+  failOnMissingFile: false
+  bindI18nToMessageSource: false
+  prettyPrint: false
+  infiniteLoops: false
+  expose-request-attributes: true
+  resolver:
+    javaBean: true
+    map: true
+    method: true
+    field: false
